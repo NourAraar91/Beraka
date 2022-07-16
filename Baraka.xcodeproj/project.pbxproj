@@ -16,6 +16,13 @@
 		27D588F02882F9DF0001D5E1 /* BarakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D588EF2882F9DF0001D5E1 /* BarakaTests.swift */; };
 		27D588FA2882F9DF0001D5E1 /* BarakaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D588F92882F9DF0001D5E1 /* BarakaUITests.swift */; };
 		27D588FC2882F9DF0001D5E1 /* BarakaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D588FB2882F9DF0001D5E1 /* BarakaUITestsLaunchTests.swift */; };
+		27D5890D288305380001D5E1 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 27D5890C288305380001D5E1 /* SwiftCSV */; };
+		27D58911288308120001D5E1 /* StockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58910288308120001D5E1 /* StockRepository.swift */; };
+		27D589142883082F0001D5E1 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D589132883082F0001D5E1 /* Stock.swift */; };
+		27D58917288309E70001D5E1 /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58916288309E70001D5E1 /* CSVReader.swift */; };
+		27D5891A28830B1E0001D5E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5891928830B1E0001D5E1 /* Constants.swift */; };
+		27D5891C28830DEB0001D5E1 /* Decimal+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5891B28830DEB0001D5E1 /* Decimal+Format.swift */; };
+		27D589202883103D0001D5E1 /* PriceFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5891F2883103D0001D5E1 /* PriceFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,12 @@
 		27D588F52882F9DF0001D5E1 /* BarakaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarakaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D588F92882F9DF0001D5E1 /* BarakaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarakaUITests.swift; sourceTree = "<group>"; };
 		27D588FB2882F9DF0001D5E1 /* BarakaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarakaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27D58910288308120001D5E1 /* StockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRepository.swift; sourceTree = "<group>"; };
+		27D589132883082F0001D5E1 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		27D58916288309E70001D5E1 /* CSVReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
+		27D5891928830B1E0001D5E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		27D5891B28830DEB0001D5E1 /* Decimal+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Format.swift"; sourceTree = "<group>"; };
+		27D5891F2883103D0001D5E1 /* PriceFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D5890D288305380001D5E1 /* SwiftCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +113,11 @@
 		27D588D72882F9DC0001D5E1 /* Baraka */ = {
 			isa = PBXGroup;
 			children = (
+				27D5891D28830F9A0001D5E1 /* Extensions */,
+				27D5891828830B0A0001D5E1 /* Constants */,
+				27D58915288309D90001D5E1 /* Helpers */,
+				27D58912288308270001D5E1 /* Models */,
+				27D5890E288307F00001D5E1 /* Repositories */,
 				27D5890A2882FAE50001D5E1 /* Storyboards */,
 				27D589092882FAD80001D5E1 /* ViewControllers */,
 				27D589082882FACB0001D5E1 /* Support */,
@@ -110,6 +129,7 @@
 		27D588EE2882F9DF0001D5E1 /* BarakaTests */ = {
 			isa = PBXGroup;
 			children = (
+				27D5891E288310190001D5E1 /* Formatter */,
 				27D588EF2882F9DF0001D5E1 /* BarakaTests.swift */,
 			);
 			path = BarakaTests;
@@ -151,6 +171,62 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		27D5890E288307F00001D5E1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				27D5890F288307FC0001D5E1 /* Stock */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		27D5890F288307FC0001D5E1 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				27D58910288308120001D5E1 /* StockRepository.swift */,
+			);
+			path = Stock;
+			sourceTree = "<group>";
+		};
+		27D58912288308270001D5E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27D589132883082F0001D5E1 /* Stock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27D58915288309D90001D5E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				27D58916288309E70001D5E1 /* CSVReader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		27D5891828830B0A0001D5E1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				27D5891928830B1E0001D5E1 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		27D5891D28830F9A0001D5E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27D5891B28830DEB0001D5E1 /* Decimal+Format.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		27D5891E288310190001D5E1 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				27D5891F2883103D0001D5E1 /* PriceFormatterTests.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +243,9 @@
 			dependencies = (
 			);
 			name = Baraka;
+			packageProductDependencies = (
+				27D5890C288305380001D5E1 /* SwiftCSV */,
+			);
 			productName = Baraka;
 			productReference = 27D588D52882F9DC0001D5E1 /* Baraka.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +318,9 @@
 				Base,
 			);
 			mainGroup = 27D588CC2882F9DC0001D5E1;
+			packageReferences = (
+				27D5890B288305380001D5E1 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+			);
 			productRefGroup = 27D588D62882F9DC0001D5E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +367,11 @@
 				27D588DD2882F9DC0001D5E1 /* ViewController.swift in Sources */,
 				27D588D92882F9DC0001D5E1 /* AppDelegate.swift in Sources */,
 				27D588DB2882F9DC0001D5E1 /* SceneDelegate.swift in Sources */,
+				27D589142883082F0001D5E1 /* Stock.swift in Sources */,
+				27D5891A28830B1E0001D5E1 /* Constants.swift in Sources */,
+				27D58911288308120001D5E1 /* StockRepository.swift in Sources */,
+				27D5891C28830DEB0001D5E1 /* Decimal+Format.swift in Sources */,
+				27D58917288309E70001D5E1 /* CSVReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D589202883103D0001D5E1 /* PriceFormatterTests.swift in Sources */,
 				27D588F02882F9DF0001D5E1 /* BarakaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +716,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27D5890B288305380001D5E1 /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27D5890C288305380001D5E1 /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27D5890B288305380001D5E1 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27D588CD2882F9DC0001D5E1 /* Project object */;
 }
