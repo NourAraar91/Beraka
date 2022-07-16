@@ -99,12 +99,9 @@
 		27D588D72882F9DC0001D5E1 /* Baraka */ = {
 			isa = PBXGroup;
 			children = (
-				27D588D82882F9DC0001D5E1 /* AppDelegate.swift */,
-				27D588DA2882F9DC0001D5E1 /* SceneDelegate.swift */,
-				27D588DC2882F9DC0001D5E1 /* ViewController.swift */,
-				27D588DE2882F9DC0001D5E1 /* Main.storyboard */,
-				27D588E12882F9DE0001D5E1 /* Assets.xcassets */,
-				27D588E32882F9DE0001D5E1 /* LaunchScreen.storyboard */,
+				27D5890A2882FAE50001D5E1 /* Storyboards */,
+				27D589092882FAD80001D5E1 /* ViewControllers */,
+				27D589082882FACB0001D5E1 /* Support */,
 				27D588E62882F9DE0001D5E1 /* Info.plist */,
 			);
 			path = Baraka;
@@ -125,6 +122,33 @@
 				27D588FB2882F9DF0001D5E1 /* BarakaUITestsLaunchTests.swift */,
 			);
 			path = BarakaUITests;
+			sourceTree = "<group>";
+		};
+		27D589082882FACB0001D5E1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				27D588D82882F9DC0001D5E1 /* AppDelegate.swift */,
+				27D588DA2882F9DC0001D5E1 /* SceneDelegate.swift */,
+				27D588E12882F9DE0001D5E1 /* Assets.xcassets */,
+				27D588E32882F9DE0001D5E1 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		27D589092882FAD80001D5E1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				27D588DC2882F9DC0001D5E1 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		27D5890A2882FAE50001D5E1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27D588DE2882F9DC0001D5E1 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
