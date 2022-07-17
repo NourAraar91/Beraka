@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		27D588D92882F9DC0001D5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D588D82882F9DC0001D5E1 /* AppDelegate.swift */; };
 		27D588DB2882F9DC0001D5E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D588DA2882F9DC0001D5E1 /* SceneDelegate.swift */; };
-		27D588DD2882F9DC0001D5E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D588DC2882F9DC0001D5E1 /* ViewController.swift */; };
+		27D588DD2882F9DC0001D5E1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D588DC2882F9DC0001D5E1 /* HomeViewController.swift */; };
 		27D588E02882F9DC0001D5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D588DE2882F9DC0001D5E1 /* Main.storyboard */; };
 		27D588E22882F9DE0001D5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D588E12882F9DE0001D5E1 /* Assets.xcassets */; };
 		27D588E52882F9DE0001D5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D588E32882F9DE0001D5E1 /* LaunchScreen.storyboard */; };
@@ -28,6 +28,8 @@
 		27D5892A2883B7F30001D5E1 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D589292883B7F30001D5E1 /* NetworkClient.swift */; };
 		27D5892C2883B8560001D5E1 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5892B2883B8560001D5E1 /* NewsResponse.swift */; };
 		27D5892F2883BCDE0001D5E1 /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5892E2883BCDE0001D5E1 /* NewsRepository.swift */; };
+		27D589472884124A0001D5E1 /* LayoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D589462884124A0001D5E1 /* LayoutFactory.swift */; };
+		27D5894A288412F70001D5E1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58949288412F70001D5E1 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +53,7 @@
 		27D588D52882F9DC0001D5E1 /* Baraka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baraka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D588D82882F9DC0001D5E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D588DA2882F9DC0001D5E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27D588DC2882F9DC0001D5E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27D588DC2882F9DC0001D5E1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		27D588DF2882F9DC0001D5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27D588E12882F9DE0001D5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D588E42882F9DE0001D5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		27D589292883B7F30001D5E1 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		27D5892B2883B8560001D5E1 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 		27D5892E2883BCDE0001D5E1 /* NewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepository.swift; sourceTree = "<group>"; };
+		27D589462884124A0001D5E1 /* LayoutFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutFactory.swift; sourceTree = "<group>"; };
+		27D58949288412F70001D5E1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 		27D588D72882F9DC0001D5E1 /* Baraka */ = {
 			isa = PBXGroup;
 			children = (
+				27D58948288412EB0001D5E1 /* ViewModels */,
+				27D589452884122C0001D5E1 /* Layout */,
 				27D589282883B7B50001D5E1 /* Network */,
 				27D5891D28830F9A0001D5E1 /* Extensions */,
 				27D5891828830B0A0001D5E1 /* Constants */,
@@ -171,7 +177,7 @@
 		27D589092882FAD80001D5E1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				27D588DC2882F9DC0001D5E1 /* ViewController.swift */,
+				27D588DC2882F9DC0001D5E1 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -272,6 +278,22 @@
 				27D5892E2883BCDE0001D5E1 /* NewsRepository.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		27D589452884122C0001D5E1 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				27D589462884124A0001D5E1 /* LayoutFactory.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		27D58948288412EB0001D5E1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				27D58949288412F70001D5E1 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,8 +433,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D588DD2882F9DC0001D5E1 /* ViewController.swift in Sources */,
+				27D5894A288412F70001D5E1 /* HomeViewModel.swift in Sources */,
+				27D588DD2882F9DC0001D5E1 /* HomeViewController.swift in Sources */,
 				27D5892C2883B8560001D5E1 /* NewsResponse.swift in Sources */,
+				27D589472884124A0001D5E1 /* LayoutFactory.swift in Sources */,
 				27D588D92882F9DC0001D5E1 /* AppDelegate.swift in Sources */,
 				27D588DB2882F9DC0001D5E1 /* SceneDelegate.swift in Sources */,
 				27D589142883082F0001D5E1 /* Stock.swift in Sources */,
@@ -608,7 +632,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -639,7 +663,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
