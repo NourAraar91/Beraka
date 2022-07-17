@@ -32,7 +32,7 @@ class NewsRepositoryImpl: NewsRepository {
     }
     
     func news() -> AnyPublisher<[Article], Error> {
-        return fetchNews().map { Array($0.suffix(from: 7)) }.eraseToAnyPublisher()
+        return fetchNews().map { Array($0.suffix(from: 6)) }.eraseToAnyPublisher()
     }
     
 }
