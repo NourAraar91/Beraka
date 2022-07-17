@@ -63,7 +63,8 @@ class HomeViewController: UICollectionViewController {
                     for: indexPath) as? StockCell,
                       let item = item as? Stock
                 else { fatalError("Could not create new cell") }
-                
+                let viewModel = StockCellViewModel(stock: item)
+                cell.configure(with: viewModel)
                 return cell
                 
             case .latestNews:

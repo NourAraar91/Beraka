@@ -23,10 +23,13 @@ class LatestNewsCell: UICollectionViewCell {
 
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var bgView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        bgView.layer.cornerRadius = 10.0
+        bgView.clipsToBounds = true
     }
     
     func configure(with viewModel: LatestNewsCellViewModel) {

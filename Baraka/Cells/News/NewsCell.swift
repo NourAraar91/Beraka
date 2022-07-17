@@ -28,10 +28,16 @@ class NewsCell: UICollectionViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var bgView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        bgView.layer.cornerRadius = 10.0
+        bgView.clipsToBounds = true
+        
+        imageView.layer.cornerRadius = 10.0
+        imageView.clipsToBounds = true
     }
     
     func configure(with viewModel: NewsCellViewModel) {

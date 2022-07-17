@@ -10,13 +10,14 @@ import UIKit
 
 class LayoutFactory {
     static func generateStocksLayout() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(50.0),
-                                              heightDimension: .absolute(50.0))
+        let itemWidth = 100.0
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalHeight(1.0),
+                                              heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .absolute(50.0),
-            heightDimension: .absolute(50.0))
+            widthDimension: .absolute(itemWidth),
+            heightDimension: .absolute(itemWidth))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         group.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
         
@@ -60,11 +61,13 @@ class LayoutFactory {
     }
     
     static func generateNewsLayout() -> NSCollectionLayoutSection {
+        
+        let insets = 10.0
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+        item.contentInsets = NSDirectionalEdgeInsets(top: insets, leading: insets, bottom: insets, trailing: insets)
         
         let groupHeight = NSCollectionLayoutDimension.absolute(132.0)
         let groupSize = NSCollectionLayoutSize(
