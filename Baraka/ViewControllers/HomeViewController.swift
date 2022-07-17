@@ -72,7 +72,8 @@ class HomeViewController: UICollectionViewController {
                     for: indexPath) as? LatestNewsCell,
                       let item = item as? Article
                 else { fatalError("Could not create new cell") }
-                
+                let viewModel = LatestNewsCellViewModel(article: item)
+                cell.configure(with: viewModel)
                 return cell
                 
             case .news:
@@ -82,8 +83,8 @@ class HomeViewController: UICollectionViewController {
                       let item = item as? Article
                 else { fatalError("Could not create new cell") }
                 
-                
-                
+                let viewModel = NewsCellViewModel(article: item)
+                cell.configure(with: viewModel)
                 return cell
             }
         }
