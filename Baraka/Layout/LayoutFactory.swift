@@ -66,7 +66,7 @@ class LayoutFactory {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
         
-        let groupHeight = NSCollectionLayoutDimension.absolute(75.0)
+        let groupHeight = NSCollectionLayoutDimension.absolute(132.0)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: groupHeight)

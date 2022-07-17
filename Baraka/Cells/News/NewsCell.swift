@@ -7,11 +7,38 @@
 
 import UIKit
 
-class NewsCell: UICollectionViewCell {
+struct NewsCellViewModel {
 
+    let title: String
+    let image: URL
+    let description: String
+    let date: String
+    
+    init(article: Article) {
+        self.title = article.title
+        self.image = article.urlToImage
+        self.description = article.description
+        self.date = article.publishedAt
+    }
+}
+
+class NewsCell: UICollectionViewCell {
+    
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configure(with viewModel: NewsCellViewModel) {
+        self.titleLable.text = viewModel.title
+        self.dateLabel.text = viewModel.date
+        self.descriptionLabel.text = viewModel.description
+        self.imageView.load(from: viewModel.image)
     }
 
 }
