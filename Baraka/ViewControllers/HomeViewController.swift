@@ -141,9 +141,7 @@ class HomeViewController: UICollectionViewController {
     
     func update(section: Section, items: [AnyHashable] ) {
         guard let dataSource = dataSource else { return }
-        var snapshot = dataSource.snapshot()
-        snapshot.appendItems(items, toSection: section)
-        dataSource.apply(snapshot)
+        dataSource.replaceItems(items, in: section)
     }
 
 }

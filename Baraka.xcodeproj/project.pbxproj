@@ -39,6 +39,7 @@
 		27D5898D28841FFF0001D5E1 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5898B28841FFF0001D5E1 /* HeaderCell.swift */; };
 		27D5898E28841FFF0001D5E1 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D5898C28841FFF0001D5E1 /* HeaderCell.xib */; };
 		27D58991288425B10001D5E1 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58990288425B10001D5E1 /* UIImageView+Ext.swift */; };
+		27D5899328845B500001D5E1 /* UICollectionViewDiffableDataSource+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5899228845B500001D5E1 /* UICollectionViewDiffableDataSource+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		27D5898B28841FFF0001D5E1 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		27D5898C28841FFF0001D5E1 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		27D58990288425B10001D5E1 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		27D5899228845B500001D5E1 /* UICollectionViewDiffableDataSource+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewDiffableDataSource+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			children = (
 				27D5891B28830DEB0001D5E1 /* Decimal+Format.swift */,
 				27D58990288425B10001D5E1 /* UIImageView+Ext.swift */,
+				27D5899228845B500001D5E1 /* UICollectionViewDiffableDataSource+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				27D5898428841FC50001D5E1 /* LatestNewsCell.swift in Sources */,
 				27D588DB2882F9DC0001D5E1 /* SceneDelegate.swift in Sources */,
 				27D589142883082F0001D5E1 /* Stock.swift in Sources */,
+				27D5899328845B500001D5E1 /* UICollectionViewDiffableDataSource+Ext.swift in Sources */,
 				27D5891A28830B1E0001D5E1 /* Constants.swift in Sources */,
 				27D5892A2883B7F30001D5E1 /* NetworkClient.swift in Sources */,
 				27D58991288425B10001D5E1 /* UIImageView+Ext.swift in Sources */,

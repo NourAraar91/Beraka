@@ -29,7 +29,15 @@ class HomeViewModelImpl: HomeViewModel {
         self.stockRepository = stockRepository
         self.newsRepository = newsRepository
         
-        getStocks()
+        Timer
+            .publish(every: 2.0, on: .main, in: .common)
+            .autoconnect()
+            .receive(on: RunLoop.main)
+            .merge(with: Just(Date()))
+            .sink {[weak self] (seconds) in
+                self?.getStocks()
+            }
+            .store(in: &subscriptions)
         getLatestNews()
         getNews()
     }
