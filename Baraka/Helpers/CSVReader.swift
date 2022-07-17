@@ -7,9 +7,10 @@
 
 import Foundation
 import SwiftCSV
+import Combine
 
 protocol CSVReader {
-    func toRows() -> [[String: String]]
+    func toRows() -> AnyPublisher<[[String: String]], Never>
 }
 
 
@@ -21,9 +22,10 @@ class StockCSVReader: CSVReader {
         self.csv = try? CSV<Named>(url: url)
     }
     
-    func toRows() -> [[String : String]] {
-        guard let csv = csv else { return [] }
-        return csv.rows
+    func toRows() -> AnyPublisher<[[String: String]], Never> {
+        guard let csv = csv else { return [].publisher.eraseToAnyPublisher() }
+        let rows: [[String: String]] = csv.rows
+        return rows.publisher.collect().eraseToAnyPublisher()
     }
 }
 

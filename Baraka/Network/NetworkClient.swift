@@ -6,32 +6,50 @@
 //
 
 import Foundation
+import Combine
 
-protocol URLSessionProtocol {
-  func data(for request: URLRequest,
-            delegate: URLSessionTaskDelegate?)
-  async throws -> (Data, URLResponse)
+protocol NetworkControllerProtocol {
+    func get<T>(type: T.Type,
+                url: URL
+    ) -> AnyPublisher<T, Error> where T: Decodable
 }
 
-extension URLSession: URLSessionProtocol {}
 
+final class NetworkController: NetworkControllerProtocol {
+    
+    func get<T: Decodable>(type: T.Type,
+                           url: URL
+    ) -> AnyPublisher<T, Error> {
+        
+        let urlRequest = URLRequest(url: url)
+        
+        return URLSession.shared.dataTaskPublisher(for: urlRequest)
+            .map(\.data)
+            .decode(type: T.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
+    
+}
 
 protocol NetworkClient {
-    func featchNews() async throws -> [Article]
+    func featchNews() -> AnyPublisher<[Article], Error>
 }
 
 class NetworkClientImp: NetworkClient {
     
-    lazy var session: URLSessionProtocol = URLSession.shared
+    let networkController: NetworkControllerProtocol
     
-    func featchNews() async throws -> [Article] {
+    init(networkController: NetworkControllerProtocol = NetworkController()) {
+        self.networkController = networkController
+    }
+    
+    func featchNews() -> AnyPublisher<[Article], Error> {
         let url = Constants.newsURL
         
-        let request = URLRequest(url: url)
-        
-        let (data, _) = try await session.data(for: request, delegate: nil)
-        let articlesResponse = try JSONDecoder().decode(NewsResponse.self, from: data)
-        return articlesResponse.articles
+        return networkController.get(type: NewsResponse.self,
+                                     url: url)
+        .map { $0.articles }
+        .eraseToAnyPublisher()
     }
     
 }
