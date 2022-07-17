@@ -6,12 +6,12 @@
 //
 
 import Foundation
-
+import Combine
 
 protocol NewsRepository {
-    func fetchNews() async throws
-    func latestNews() async throws -> [Article]
-    func news() async throws -> [Article]
+    func fetchNews() -> AnyPublisher<[Article], Error>
+    func latestNews() -> AnyPublisher<[Article], Error>
+    func news() -> AnyPublisher<[Article], Error>
 }
 
 
@@ -23,22 +23,16 @@ class NewsRepositoryImpl: NewsRepository {
         self.newtworkClient = newtworkClient
     }
     
-    func fetchNews() async throws {
-        articles = try await newtworkClient.featchNews()
+    func fetchNews() -> AnyPublisher<[Article], Error> {
+        return newtworkClient.featchNews()
     }
     
-    func latestNews() async throws -> [Article] {
-        if articles == nil {
-           try await fetchNews()
-        }
-        return Array(articles?.prefix(6) ?? [])
+    func latestNews() -> AnyPublisher<[Article], Error> {
+        return fetchNews().map { Array($0.prefix(6)) }.eraseToAnyPublisher()
     }
     
-    func news() async throws -> [Article] {
-        if articles == nil {
-           try await fetchNews()
-        }
-        return Array(articles?.suffix(from: 7) ?? [])
+    func news() -> AnyPublisher<[Article], Error> {
+        return fetchNews().map { Array($0.suffix(from: 7)) }.eraseToAnyPublisher()
     }
     
 }
