@@ -34,7 +34,7 @@ class NewsRepositoryMock: NewsRepository {
     }
     
     func news() -> AnyPublisher<[Article], Error> {
-        return newsArray.map{ Array($0.suffix(from: 7)) }.eraseToAnyPublisher()
+        return newsArray.map{ Array($0.suffix(from: 6)) }.eraseToAnyPublisher()
     }
     
     
