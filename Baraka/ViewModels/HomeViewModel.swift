@@ -40,7 +40,7 @@ class HomeViewModelImpl: HomeViewModel {
             .sink(receiveCompletion: { (completion) in
                 switch completion {
                 case let .failure(error):
-                    print("Couldn't get users: \(error)")
+                    print("Couldn't get stocks: \(error)")
                 case .finished: break
                 }
             }) { stocks in
@@ -55,7 +55,7 @@ class HomeViewModelImpl: HomeViewModel {
             .sink(receiveCompletion: { (completion) in
                 switch completion {
                 case let .failure(error):
-                    print("Couldn't get users: \(error)")
+                    print("Couldn't get latestNews: \(error)")
                 case .finished: break
                 }
             }) { news in
@@ -70,7 +70,7 @@ class HomeViewModelImpl: HomeViewModel {
             .sink(receiveCompletion: { (completion) in
                 switch completion {
                 case let .failure(error):
-                    print("Couldn't get users: \(error)")
+                    print("Couldn't get news: \(error)")
                 case .finished: break
                 }
             }) { news in

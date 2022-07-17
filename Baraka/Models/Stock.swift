@@ -8,7 +8,7 @@
 import UIKit
 
 
-struct Stock {
+struct Stock: Hashable {
     let price: Decimal
     let symbol: String
 }
