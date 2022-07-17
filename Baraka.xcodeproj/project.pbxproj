@@ -43,6 +43,7 @@
 		27D58999288465620001D5E1 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58998288465620001D5E1 /* HomeViewModelTests.swift */; };
 		27D5899B288465A70001D5E1 /* StockRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5899A288465A70001D5E1 /* StockRepositoryMock.swift */; };
 		27D5899D288465CA0001D5E1 /* NewsReposirotyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5899C288465CA0001D5E1 /* NewsReposirotyMock.swift */; };
+		27D589A228846C6B0001D5E1 /* StockCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D589A128846C6B0001D5E1 /* StockCellViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		27D58998288465620001D5E1 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		27D5899A288465A70001D5E1 /* StockRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRepositoryMock.swift; sourceTree = "<group>"; };
 		27D5899C288465CA0001D5E1 /* NewsReposirotyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReposirotyMock.swift; sourceTree = "<group>"; };
+		27D589A128846C6B0001D5E1 /* StockCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCellViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		27D588EE2882F9DF0001D5E1 /* BarakaTests */ = {
 			isa = PBXGroup;
 			children = (
+				27D589A028846C500001D5E1 /* StockCellViewModel */,
 				27D589972884654D0001D5E1 /* HomeViewModel */,
 				27D58994288464B50001D5E1 /* Extensions */,
 				27D58924288317CB0001D5E1 /* Mocks */,
@@ -383,6 +386,14 @@
 			path = HomeViewModel;
 			sourceTree = "<group>";
 		};
+		27D589A028846C500001D5E1 /* StockCellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				27D589A128846C6B0001D5E1 /* StockCellViewModelTests.swift */,
+			);
+			path = StockCellViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,6 +564,7 @@
 				27D58996288464CA0001D5E1 /* XCTest+Ext.swift in Sources */,
 				27D589202883103D0001D5E1 /* PriceFormatterTests.swift in Sources */,
 				27D5899D288465CA0001D5E1 /* NewsReposirotyMock.swift in Sources */,
+				27D589A228846C6B0001D5E1 /* StockCellViewModelTests.swift in Sources */,
 				27D5899B288465A70001D5E1 /* StockRepositoryMock.swift in Sources */,
 				27D588F02882F9DF0001D5E1 /* BarakaTests.swift in Sources */,
 				27D58926288317E20001D5E1 /* CSVReaderMock.swift in Sources */,
