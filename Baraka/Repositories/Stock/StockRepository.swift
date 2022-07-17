@@ -13,14 +13,14 @@ protocol StockRepository {
 
 
 class StockRepositoryImpl: StockRepository {
-    private let stocksCSVReader: CSVReader
+    private let csvReader: CSVReader
     
-    init(stocksCSVReader: CSVReader) {
-        self.stocksCSVReader = stocksCSVReader
+    init(csvReader: CSVReader) {
+        self.csvReader = csvReader
     }
     
     func fetchStocks() -> [Stock] {
-        let rows = stocksCSVReader.toRows()
+        let rows = csvReader.toRows()
         return rows.map { Stock(price: Decimal(string: $0["PRICE"] ?? "") ?? .zero, symbol: $0["STOCK"] ?? "") }
     }
 }

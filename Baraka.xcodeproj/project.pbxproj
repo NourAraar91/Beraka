@@ -23,6 +23,8 @@
 		27D5891A28830B1E0001D5E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5891928830B1E0001D5E1 /* Constants.swift */; };
 		27D5891C28830DEB0001D5E1 /* Decimal+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5891B28830DEB0001D5E1 /* Decimal+Format.swift */; };
 		27D589202883103D0001D5E1 /* PriceFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5891F2883103D0001D5E1 /* PriceFormatterTests.swift */; };
+		27D58923288317B00001D5E1 /* StockRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58922288317B00001D5E1 /* StockRepositoryTests.swift */; };
+		27D58926288317E20001D5E1 /* CSVReaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58925288317E10001D5E1 /* CSVReaderMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		27D5891928830B1E0001D5E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		27D5891B28830DEB0001D5E1 /* Decimal+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Format.swift"; sourceTree = "<group>"; };
 		27D5891F2883103D0001D5E1 /* PriceFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatterTests.swift; sourceTree = "<group>"; };
+		27D58922288317B00001D5E1 /* StockRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRepositoryTests.swift; sourceTree = "<group>"; };
+		27D58925288317E10001D5E1 /* CSVReaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReaderMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 		27D588EE2882F9DF0001D5E1 /* BarakaTests */ = {
 			isa = PBXGroup;
 			children = (
+				27D58924288317CB0001D5E1 /* Mocks */,
+				27D58921288317930001D5E1 /* StocksRepository */,
 				27D5891E288310190001D5E1 /* Formatter */,
 				27D588EF2882F9DF0001D5E1 /* BarakaTests.swift */,
 			);
@@ -225,6 +231,22 @@
 				27D5891F2883103D0001D5E1 /* PriceFormatterTests.swift */,
 			);
 			path = Formatter;
+			sourceTree = "<group>";
+		};
+		27D58921288317930001D5E1 /* StocksRepository */ = {
+			isa = PBXGroup;
+			children = (
+				27D58922288317B00001D5E1 /* StockRepositoryTests.swift */,
+			);
+			path = StocksRepository;
+			sourceTree = "<group>";
+		};
+		27D58924288317CB0001D5E1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				27D58925288317E10001D5E1 /* CSVReaderMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,7 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D589202883103D0001D5E1 /* PriceFormatterTests.swift in Sources */,
+				27D58923288317B00001D5E1 /* StockRepositoryTests.swift in Sources */,
 				27D588F02882F9DF0001D5E1 /* BarakaTests.swift in Sources */,
+				27D58926288317E20001D5E1 /* CSVReaderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
