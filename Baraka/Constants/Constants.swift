@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let stocksURL = URL(string: "https://raw.githubusercontent.com/dsancov/TestData/main/stocks.csv")!
+    static let newsURL = URL(string: "https://saurav.tech/NewsAPI/everything/cnn.json")!
 }
