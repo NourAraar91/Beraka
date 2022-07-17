@@ -25,6 +25,8 @@
 		27D589202883103D0001D5E1 /* PriceFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5891F2883103D0001D5E1 /* PriceFormatterTests.swift */; };
 		27D58923288317B00001D5E1 /* StockRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58922288317B00001D5E1 /* StockRepositoryTests.swift */; };
 		27D58926288317E20001D5E1 /* CSVReaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D58925288317E10001D5E1 /* CSVReaderMock.swift */; };
+		27D5892A2883B7F30001D5E1 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D589292883B7F30001D5E1 /* NetworkClient.swift */; };
+		27D5892C2883B8560001D5E1 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5892B2883B8560001D5E1 /* NewsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		27D5891F2883103D0001D5E1 /* PriceFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatterTests.swift; sourceTree = "<group>"; };
 		27D58922288317B00001D5E1 /* StockRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRepositoryTests.swift; sourceTree = "<group>"; };
 		27D58925288317E10001D5E1 /* CSVReaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReaderMock.swift; sourceTree = "<group>"; };
+		27D589292883B7F30001D5E1 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		27D5892B2883B8560001D5E1 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		27D588D72882F9DC0001D5E1 /* Baraka */ = {
 			isa = PBXGroup;
 			children = (
+				27D589282883B7B50001D5E1 /* Network */,
 				27D5891D28830F9A0001D5E1 /* Extensions */,
 				27D5891828830B0A0001D5E1 /* Constants */,
 				27D58915288309D90001D5E1 /* Helpers */,
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				27D589132883082F0001D5E1 /* Stock.swift */,
+				27D5892B2883B8560001D5E1 /* NewsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +253,14 @@
 				27D58925288317E10001D5E1 /* CSVReaderMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		27D589282883B7B50001D5E1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				27D589292883B7F30001D5E1 /* NetworkClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,10 +401,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D588DD2882F9DC0001D5E1 /* ViewController.swift in Sources */,
+				27D5892C2883B8560001D5E1 /* NewsResponse.swift in Sources */,
 				27D588D92882F9DC0001D5E1 /* AppDelegate.swift in Sources */,
 				27D588DB2882F9DC0001D5E1 /* SceneDelegate.swift in Sources */,
 				27D589142883082F0001D5E1 /* Stock.swift in Sources */,
 				27D5891A28830B1E0001D5E1 /* Constants.swift in Sources */,
+				27D5892A2883B7F30001D5E1 /* NetworkClient.swift in Sources */,
 				27D58911288308120001D5E1 /* StockRepository.swift in Sources */,
 				27D5891C28830DEB0001D5E1 /* Decimal+Format.swift in Sources */,
 				27D58917288309E70001D5E1 /* CSVReader.swift in Sources */,
@@ -580,7 +596,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,7 +627,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
